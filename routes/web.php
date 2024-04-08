@@ -29,5 +29,4 @@ Route::get('/sorts/{$name}',[AlcoholController::class, 'sorts']);
 
 Route::post('/filter-alcohols', [AlcoholController::class, 'filter']);
 
-так ану не еби мне голову
-давай работай
+давай для закрепочки
