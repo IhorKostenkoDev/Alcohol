@@ -240,29 +240,23 @@ class AlcoholController extends Controller
 
         dd('end');
     }
+//
     public function filter(Request $request)
     {
         $filters = $request->query();
-
         $alcohols = AlcoholModel::query();
-
         foreach ($filters as $field => $value) {
-            if ($value) {
+            if ($field !== 'sort_field' && $field !== 'sort_direction' && $value) {
                 $alcohols->where($field, 'like', '%' . $value . '%');
             }
         }
-
+        $sortField = $request->query('sort_field');
+        $sortDirection = $request->query('sort_direction', 'asc');
+        if ($sortField) {
+            $alcohols->orderBy($sortField, $sortDirection);
+        }
         $filteredAlcohols = $alcohols->get();
-
-       dd($filteredAlcohols);
+        dd($filteredAlcohols);
     }
-// public function alt()
-//    {
-//        $posts = AlcoholModel::where('volume', '0.5')->get();
-//        foreach ($posts as $post){
-//            dump($post->name);
-//        }
-//        dd('end');
-//    }
 }
 

@@ -26,7 +26,7 @@ Route::get('/create/update_or_create',[AlcoholController::class, 'updateorcreate
 
 
 Route::get('/sorts/{$name}',[AlcoholController::class, 'sorts']);
+Route::get('/filter', [AlcoholController::class, 'filter']);
 
-Route::post('/filter-alcohols', [AlcoholController::class, 'filter']);
+Route::post('/filter', [AlcoholController::class, 'filter']);
 
-давай для закрепочки
