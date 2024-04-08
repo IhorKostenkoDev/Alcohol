@@ -30,5 +30,12 @@ Route::get('/sorts/{$name}',[AlcoholController::class, 'sorts']);
 Route::post('/filter-alcohols', [AlcoholController::class, 'filter']);
 
 Route::get('/filter-alcohols', [AlcoholController::class, 'filter']);
+Route::get('/filter-alcohols', [AlcoholController::class, 'filter']);
+Route::get('/filter-alcohols', [AlcoholController::class, 'filter']);
+Route::get('/filter-alcohols', [AlcoholController::class, 'filter']);
+Route::get('/filter-alcohols', [AlcoholController::class, 'filter']);
+Route::get('/filter-alcohols', [AlcoholController::class, 'filter']);
+Route::get('/filter-alcohols', [AlcoholController::class, 'filter']);
+Route::get('/filter-alcohols', [AlcoholController::class, 'filter']);
 
 
