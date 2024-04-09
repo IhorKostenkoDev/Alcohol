@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AlcoholApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/alcohol',[AlcoholApiController::class, 'alcohol']);
+Route::post('/add_alcohol',[AlcoholApiController::class, 'addalcohol']);
+Route::post('/update_alcohol/{id}', [AlcoholApiController::class, 'updatealcohol']);
+
+
+
+
+
